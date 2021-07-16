@@ -1,0 +1,19 @@
+pipeline{
+
+agent {
+label 'awsagent'
+}
+
+stages{
+
+stage('ansibledeploy'){
+steps{
+ansiblePlaybook(playbook : "${env.WORKSPACE}/playbook.yml",inventory: "${env.WORKSPACE}/hosts",credentialsId: 'aws163secret')
+
+}
+
+}
+
+}
+
+}

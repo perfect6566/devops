@@ -1,0 +1,10 @@
+---
+- hosts: example
+  tasks:
+      - debug: msg="{{  lookup('env','HOSTNAME')}}"
+      - name: "df start"
+        shell: hostname && df
+        register: shell_result
+      - name: "显示结果"
+        debug:
+         var: shell_result.stdout_lines
