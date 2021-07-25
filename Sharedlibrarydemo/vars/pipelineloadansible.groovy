@@ -1,3 +1,4 @@
+#!groovy
 import org.cicd.tools
 import org.devops.ansible
 
