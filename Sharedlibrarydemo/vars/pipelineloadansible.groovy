@@ -1,6 +1,6 @@
 #!groovy
 import org.cicd.tools
-import org.devops.ansible
+import org.cicd.ansible
 
 
 def call(hosts){
